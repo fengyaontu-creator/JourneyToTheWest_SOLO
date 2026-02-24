@@ -77,7 +77,7 @@ OPENROUTER_MODEL=openai/gpt-4o-mini
 ## 运行示例（终端实录）
 
 ```text
-base) PS E:\VScodeProjects\xiyouTRPG\xiyou_solo> python main.py
+(base) PS E:\VScodeProjects\xiyouTRPG\xiyou_solo> python main.py
 任务：黄风岭迷雾 | 目标：找出真路并护送药材通过山口。 | 地点：黄风岭前哨
 HP 8/11 | 金币 45 | 关键道具 dagger,simple_armor
 你要做什么？> new
@@ -111,33 +111,13 @@ Pick two bonus attributes / 选择两项加值：
 2) 智
 3) 心
 4) 运
-> 12
-Pick two bonus attributes / 选择两项加值：
-1) 体
-2) 智
-3) 心
-4) 运
 > 1
 Pick two bonus attributes / 选择两项加值：
 1) 体
 2) 智
 3) 心
 4) 运
-> 2
-任务：白骨疑影 | 目标：辨明身份并避免误伤无辜。 | 地点：白骨岭驿站
-HP 14/14 | 金币 70 | 关键道具 healing_herbs,incense_charm
-你要做什么？> 遇到随机路人发现是自己前男友
-[DM] Part A: Narrative  
-在白骨岭驿站的小道上，你突然认出了路边的那个人，他竟然是你曾经的前男友。昔日的甜蜜回忆涌上心头，但此刻却让你感到一丝错愕和不安。你不知道他此时的身份是否真实，还是潜藏着某种阴谋。周围的环境仿佛也随着这次重逢变得紧张起来，白骨岭的阴影似乎在你们之间游荡。你可以选择上前询问他的来意，保持距离观察他的举动，或者试着寻找周围的线索了解更多情况。
 
-3) 心
-4) 运
-> 1
-Pick two bonus attributes / 选择两项加值：
-1) 体
-2) 智
-3) 心
-4) 运
 > 2
 任务：白骨疑影 | 目标：辨明身份并避免误伤无辜。 | 地点：白骨岭驿站
 HP 14/14 | 金币 70 | 关键道具 healing_herbs,incense_charm
