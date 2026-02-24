@@ -46,6 +46,9 @@ def call_dm_stub(dm_system: str, dm_context: str, player_input: str) -> str:
             "combat": {"enemy_pack_id": ""},
             "grant_clue": False,
             "clue": {"title": "", "detail": ""},
+            "flags_to_add": ["scene:investigation"],
+            "world_tick": {"threat_delta": 0, "clock_delta": 1, "notes": "Rumors circulate in town."},
+            "npc_attitude_changes": [],
             "offer_actions": ["Inspect details", "Talk to witnesses", "Push forward carefully"],
             "tone_tags": ["light", "myth"],
         }
@@ -62,6 +65,9 @@ def call_dm_stub(dm_system: str, dm_context: str, player_input: str) -> str:
             "combat": {"enemy_pack_id": ""},
             "grant_clue": False,
             "clue": {"title": "", "detail": ""},
+            "flags_to_add": ["scene:investigation"],
+            "world_tick": {"threat_delta": 0, "clock_delta": 1, "notes": "集市里新的流言正在发酵。"},
+            "npc_attitude_changes": [],
             "offer_actions": ["观察细节", "与目击者交谈", "谨慎推进"],
             "tone_tags": ["light", "myth"],
         }
@@ -117,4 +123,3 @@ def generate_dm_reply(dm_system: str, dm_context: str, player_input: str) -> str
         LAST_MODE = "offline_error"
         LAST_ERROR = str(exc)
         return call_dm_stub(dm_system, dm_context, player_input)
-

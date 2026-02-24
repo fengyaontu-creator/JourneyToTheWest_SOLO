@@ -12,12 +12,16 @@ DEFAULT_DIRECTIVE: Dict[str, Any] = {
     "combat": {"enemy_pack_id": ""},
     "grant_clue": False,
     "clue": {"title": "", "detail": ""},
+    "flags_to_add": [],
+    "world_tick": {"threat_delta": 0, "clock_delta": 1, "notes": ""},
+    "npc_attitude_changes": [],
     "offer_actions": [],
     "tone_tags": [],
 }
 
 ALLOWED_ATTR = {"Body", "Mind", "Spirit", "Luck"}
 ALLOWED_DC = {10, 15, 20, 25}
+ATTITUDE_SET = {"hostile", "unfriendly", "neutral", "friendly", "allied"}
 
 
 def _safe_bool(v: Any) -> bool:
@@ -64,6 +68,59 @@ def _normalize_directive(raw: Dict[str, Any]) -> Dict[str, Any]:
     clue = raw.get("clue", {}) if isinstance(raw.get("clue", {}), dict) else {}
     d["clue"] = {"title": str(clue.get("title", "")), "detail": str(clue.get("detail", ""))}
 
+    flags = raw.get("flags_to_add", [])
+    if isinstance(flags, list):
+        d["flags_to_add"] = [str(x).strip() for x in flags[:8] if str(x).strip()]
+    else:
+        d["flags_to_add"] = []
+
+    wt = raw.get("world_tick", {}) if isinstance(raw.get("world_tick", {}), dict) else {}
+    threat_delta = wt.get("threat_delta", 0)
+    clock_delta = wt.get("clock_delta", 1)
+    try:
+        threat_delta = int(threat_delta)
+    except (TypeError, ValueError):
+        threat_delta = 0
+    try:
+        clock_delta = int(clock_delta)
+    except (TypeError, ValueError):
+        clock_delta = 1
+    d["world_tick"] = {
+        "threat_delta": max(-2, min(3, threat_delta)),
+        "clock_delta": max(1, min(6, clock_delta)),
+        "notes": str(wt.get("notes", ""))[:160],
+    }
+
+    npc_changes: Any = raw.get("npc_attitude_changes", [])
+    norm_changes = []
+    if isinstance(npc_changes, list):
+        for row in npc_changes[:5]:
+            if not isinstance(row, dict):
+                continue
+            npc_id = str(row.get("npc_id", "")).strip()
+            if not npc_id:
+                continue
+            name = str(row.get("name", "")).strip()
+            reason = str(row.get("reason", "")).strip()
+            delta_raw = row.get("delta", 0)
+            try:
+                delta = int(delta_raw)
+            except (TypeError, ValueError):
+                delta = 0
+            set_to = str(row.get("set_to", "")).strip().lower()
+            if set_to not in ATTITUDE_SET:
+                set_to = ""
+            norm_changes.append(
+                {
+                    "npc_id": npc_id,
+                    "name": name,
+                    "delta": max(-2, min(2, delta)),
+                    "set_to": set_to,
+                    "reason": reason[:160],
+                }
+            )
+    d["npc_attitude_changes"] = norm_changes
+
     acts = raw.get("offer_actions", [])
     d["offer_actions"] = [str(x) for x in acts[:5]] if isinstance(acts, list) else []
     tags = raw.get("tone_tags", [])
@@ -82,4 +139,3 @@ def parse_dm_output(text: str) -> Tuple[str, Dict[str, Any]]:
         directive = dict(DEFAULT_DIRECTIVE)
     narrative = _strip_json_from_narrative(text, blob)
     return narrative, directive
-

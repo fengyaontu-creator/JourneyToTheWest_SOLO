@@ -27,6 +27,7 @@ from storage import (
 QUIT_WORDS = {"quit", "exit", "q"}
 BASE_DIR = Path(__file__).resolve().parent
 DM_SYSTEM_PATH = BASE_DIR / "prompts" / "dm_system.txt"
+ATTITUDE_STEPS = ("hostile", "unfriendly", "neutral", "friendly", "allied")
 
 
 def _read_dm_system() -> str:
@@ -63,6 +64,9 @@ def _ensure_runtime_fields(state: Dict[str, Any]) -> None:
     story.setdefault("required_progress", 4)
     story.setdefault("threat_level", 1)
     story.setdefault("completed", False)
+    story.setdefault("world_tick", 0)
+    story.setdefault("day", 1)
+    story.setdefault("clock", 8)
 
     player = state.setdefault("player", {})
     player.setdefault("stats", {"body": 10, "wit": 10, "spirit": 10, "luck": 10})
@@ -70,6 +74,20 @@ def _ensure_runtime_fields(state: Dict[str, Any]) -> None:
     player.setdefault("once_flags", {"simple_armor_applied": False})
     if "mods" not in player or "passives" not in player:
         _calc_derived(player)
+
+    npcs = state.setdefault("npcs", [])
+    if not isinstance(npcs, list):
+        state["npcs"] = []
+        npcs = state["npcs"]
+    for npc in npcs:
+        if not isinstance(npc, dict):
+            continue
+        npc.setdefault("id", "")
+        npc.setdefault("name", {"zh": "", "en": ""})
+        if "attitude_score" not in npc:
+            raw = str(npc.get("attitude", "neutral")).strip().lower()
+            npc["attitude_score"] = max(-2, min(2, ATTITUDE_STEPS.index(raw) - 2 if raw in ATTITUDE_STEPS else 0))
+        npc["attitude"] = ATTITUDE_STEPS[max(0, min(4, int(npc["attitude_score"]) + 2))]
 
 
 def _default_state(session_id: str) -> Dict[str, Any]:
@@ -105,7 +123,11 @@ def _default_state(session_id: str) -> Dict[str, Any]:
             "threat_level": 1,
             "completed": False,
             "flags": [],
+            "world_tick": 0,
+            "day": 1,
+            "clock": 8,
         },
+        "npcs": [],
         "combat": None,
     }
 
@@ -356,6 +378,9 @@ def _build_dm_context(state: Dict[str, Any], log_data: Dict[str, Any], recent_n:
     lang = state.get("language", "zh")
     story = state["story"]
     player = state["player"]
+    npcs = state.get("npcs", [])
+    npc_brief = [f"{n.get('id', '')}:{n.get('attitude', 'neutral')}" for n in npcs[:8] if isinstance(n, dict)]
+    flags = list(story.get("flags", []))
     recent = log_data.get("events", [])[-recent_n:]
     lines = [
         f"language: {lang}",
@@ -365,8 +390,13 @@ def _build_dm_context(state: Dict[str, Any], log_data: Dict[str, Any], recent_n:
         f"goal: {loc(story.get('current_goal', {}), lang)}",
         f"location: {loc(story.get('location', {}), lang)}",
         f"turn: {story.get('turn', 0)}",
+        f"world_tick: {story.get('world_tick', 0)}",
+        f"day: {story.get('day', 1)}",
+        f"clock: {story.get('clock', 8)}",
         f"progress: {story.get('progress', 0)}/{story.get('required_progress', 4)}",
         f"threat_level: {story.get('threat_level', 1)}",
+        f"flags: {flags[-10:]}",
+        f"npcs: {npc_brief}",
         f"player_name: {player.get('name', '')}",
         f"hp: {player.get('hp', 0)}/{player.get('max_hp', 0)}",
         f"gold: {player.get('gold', 0)}",
@@ -406,6 +436,106 @@ def _consume_temp_effects(player: Dict[str, Any], attr: str, event_tags: List[st
         mode = "adv"
         temp["next_adv_tags"] = []
     return bonus, mode
+
+
+def _append_story_flag(story: Dict[str, Any], flag: str) -> bool:
+    text = str(flag).strip()
+    if not text:
+        return False
+    flags = story.setdefault("flags", [])
+    if text in flags:
+        return False
+    flags.append(text)
+    return True
+
+
+def _attitude_from_score(score: int) -> str:
+    return ATTITUDE_STEPS[max(0, min(4, int(score) + 2))]
+
+
+def _find_or_create_npc(state: Dict[str, Any], npc_id: str, name: str = "") -> Dict[str, Any]:
+    npcs = state.setdefault("npcs", [])
+    for npc in npcs:
+        if str(npc.get("id", "")) == npc_id:
+            return npc
+    label = name.strip() or npc_id
+    npc = {"id": npc_id, "name": {"zh": label, "en": label}, "attitude_score": 0, "attitude": "neutral"}
+    npcs.append(npc)
+    return npc
+
+
+def _apply_npc_attitude_changes(state: Dict[str, Any], log_data: Dict[str, Any], changes: List[Dict[str, Any]]) -> None:
+    for row in changes:
+        npc_id = str(row.get("npc_id", "")).strip()
+        if not npc_id:
+            continue
+        npc = _find_or_create_npc(state, npc_id, str(row.get("name", "")))
+        old_score = int(npc.get("attitude_score", 0))
+        set_to = str(row.get("set_to", "")).strip().lower()
+        if set_to in ATTITUDE_STEPS:
+            new_score = ATTITUDE_STEPS.index(set_to) - 2
+        else:
+            delta = int(row.get("delta", 0))
+            new_score = old_score + delta
+        new_score = max(-2, min(2, new_score))
+        if new_score == old_score:
+            continue
+        npc["attitude_score"] = new_score
+        npc["attitude"] = _attitude_from_score(new_score)
+        append_event(
+            log_data,
+            "update",
+            "npc_attitude_changed",
+            {
+                "npc_id": npc_id,
+                "before": _attitude_from_score(old_score),
+                "after": npc["attitude"],
+                "delta": new_score - old_score,
+                "reason": str(row.get("reason", "")),
+            },
+        )
+
+
+def _run_world_tick(state: Dict[str, Any], log_data: Dict[str, Any], directive: Dict[str, Any], turn_outcome: str) -> None:
+    story = state["story"]
+    wt = directive.get("world_tick", {}) if isinstance(directive.get("world_tick", {}), dict) else {}
+    tick = int(story.get("world_tick", 0)) + 1
+    story["world_tick"] = tick
+
+    clock_delta = int(wt.get("clock_delta", 1))
+    clock_delta = max(1, min(6, clock_delta))
+    clock = int(story.get("clock", 8)) + clock_delta
+    day = int(story.get("day", 1))
+    while clock >= 24:
+        clock -= 24
+        day += 1
+    story["clock"] = clock
+    story["day"] = day
+
+    threat_delta = int(wt.get("threat_delta", 0))
+    if turn_outcome in {"outcome_fail", "outcome_fumble", "passive_fail"}:
+        threat_delta += 1
+    elif turn_outcome in {"outcome_critical", "outcome_success", "passive_success"}:
+        threat_delta -= 1
+    story["threat_level"] = max(0, min(9, int(story.get("threat_level", 1)) + threat_delta))
+
+    if int(story["threat_level"]) >= 4:
+        _append_story_flag(story, "high_threat")
+
+    append_event(
+        log_data,
+        "world_tick",
+        "world_tick",
+        {
+            "tick": tick,
+            "day": day,
+            "clock": clock,
+            "clock_delta": clock_delta,
+            "threat_delta": threat_delta,
+            "threat_level": story["threat_level"],
+            "notes": str(wt.get("notes", "")),
+        },
+    )
 
 
 def _apply_outcome(state: Dict[str, Any], log_data: Dict[str, Any], event: Dict[str, Any], check: Dict[str, Any], outcome_key: str) -> str:
@@ -565,6 +695,7 @@ def _run_turn(state: Dict[str, Any], log_data: Dict[str, Any], action_text: str,
     dm_context = _build_dm_context(state, log_data)
     raw_output = generate_dm_reply(dm_system, dm_context, action_text)
     narrative, directive = parse_dm_output(raw_output)
+    turn_outcome = "neutral"
 
     print(f"[DM] {narrative}")
     offers = directive.get("offer_actions", [])
@@ -576,8 +707,17 @@ def _run_turn(state: Dict[str, Any], log_data: Dict[str, Any], action_text: str,
 
     if directive.get("grant_clue"):
         clue = directive.get("clue", {})
-        story.setdefault("flags", []).append({"title": clue.get("title", ""), "detail": clue.get("detail", "")})
+        title = str(clue.get("title", "")).strip()
+        detail = str(clue.get("detail", "")).strip()
+        if title:
+            _append_story_flag(story, f"clue:{title}")
+        if detail:
+            _append_story_flag(story, f"detail:{detail[:60]}")
         append_event(log_data, "update", "clue_granted", {"clue": clue})
+    for flag in directive.get("flags_to_add", []):
+        added = _append_story_flag(story, str(flag))
+        if added:
+            append_event(log_data, "update", "flag_added", {"flag": str(flag)})
 
     if directive.get("enter_combat"):
         pack_id = str(directive.get("combat", {}).get("enemy_pack_id", "")).strip() or "imp_pair"
@@ -654,6 +794,7 @@ def _run_turn(state: Dict[str, Any], log_data: Dict[str, Any], action_text: str,
             append_event(log_data, "combat", "combat_win", {"enemy_pack_id": c["enemy_pack_id"], "round": c["round"]})
             story["progress"] += 1
             state["combat"] = None
+        turn_outcome = outcome_key
     else:
         # Non-combat: directive decides key check vs passive resolution.
         if directive.get("need_check"):
@@ -711,6 +852,7 @@ def _run_turn(state: Dict[str, Any], log_data: Dict[str, Any], action_text: str,
                 check,
                 outcome_key,
             )
+            turn_outcome = outcome_key
         else:
             # Passive resolution path.
             attr = _directive_attr_to_internal(str(directive.get("check", {}).get("attribute", "Mind")))
@@ -736,6 +878,7 @@ def _run_turn(state: Dict[str, Any], log_data: Dict[str, Any], action_text: str,
                 },
             )
             status_key = "passive_success" if check["success"] else "passive_fail"
+            turn_outcome = status_key
             attr_label = ATTR_LABEL[attr][lang]
             if lang == "zh":
                 print(f"判定类型：被动（不掷骰） | 属性：{attr_label}")
@@ -749,6 +892,13 @@ def _run_turn(state: Dict[str, Any], log_data: Dict[str, Any], action_text: str,
             else:
                 story["threat_level"] += 1
         append_event(log_data, "scene", "turn_resolved", {"status_key": status_key})
+
+    _apply_npc_attitude_changes(
+        state,
+        log_data,
+        directive.get("npc_attitude_changes", []) if isinstance(directive.get("npc_attitude_changes", []), list) else [],
+    )
+    _run_world_tick(state, log_data, directive, turn_outcome)
 
     completed_reward = _check_quest_completion(state, log_data)
     if completed_reward is not None:
