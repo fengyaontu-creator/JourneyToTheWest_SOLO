@@ -1,0 +1,76 @@
+{
+  "session_id": "sess_20260225_010702",
+  "language": "zh",
+  "seed": null,
+  "player": {
+    "name": "小丑",
+    "race_id": "human",
+    "class_id": "pilgrim_monk",
+    "stats": {
+      "body": 15,
+      "wit": 12,
+      "spirit": 13,
+      "luck": 13
+    },
+    "mods": {
+      "body": 2,
+      "wit": 1,
+      "spirit": 1,
+      "luck": 1
+    },
+    "passives": {
+      "body": 12,
+      "wit": 11,
+      "spirit": 11,
+      "luck": 11
+    },
+    "max_hp": 14,
+    "hp": 14,
+    "gold": 70,
+    "inventory": [
+      "healing_herbs",
+      "incense_charm"
+    ],
+    "resources": {
+      "calm_mind": 2
+    },
+    "temp_effects": {
+      "next_bonus": {},
+      "next_adv_tags": []
+    },
+    "once_flags": {
+      "simple_armor_applied": false
+    }
+  },
+  "story": {
+    "quest_id": "whitebone_shadow",
+    "quest_title": {
+      "zh": "白骨疑影",
+      "en": "Whitebone Doubt"
+    },
+    "current_goal": {
+      "zh": "辨明身份并避免误伤无辜。",
+      "en": "Identify the true threat without harming innocents."
+    },
+    "reward_gold_range": [
+      70,
+      130
+    ],
+    "tags": [
+      "identity",
+      "social",
+      "illusion"
+    ],
+    "location": {
+      "zh": "白骨岭驿站",
+      "en": "Whitebone Posthouse"
+    },
+    "turn": 1,
+    "progress": 0,
+    "required_progress": 4,
+    "threat_level": 2,
+    "completed": false,
+    "flags": []
+  },
+  "combat": null
+}

@@ -1,0 +1,76 @@
+{
+  "session_id": "sess_20260225_001540",
+  "language": "zh",
+  "seed": null,
+  "player": {
+    "name": "???",
+    "race_id": "fox_spirit",
+    "class_id": "martial",
+    "stats": {
+      "body": 9,
+      "wit": 13,
+      "spirit": 9,
+      "luck": 10
+    },
+    "mods": {
+      "body": -1,
+      "wit": 1,
+      "spirit": -1,
+      "luck": 0
+    },
+    "passives": {
+      "body": 9,
+      "wit": 11,
+      "spirit": 9,
+      "luck": 10
+    },
+    "max_hp": 11,
+    "hp": 8,
+    "gold": 45,
+    "inventory": [
+      "dagger",
+      "simple_armor"
+    ],
+    "resources": {
+      "power_strike": 2
+    },
+    "temp_effects": {
+      "next_bonus": {},
+      "next_adv_tags": []
+    },
+    "once_flags": {
+      "simple_armor_applied": false
+    }
+  },
+  "story": {
+    "quest_id": "huangfeng_mist",
+    "quest_title": {
+      "zh": "黄风岭迷雾",
+      "en": "Huangfeng Mist"
+    },
+    "current_goal": {
+      "zh": "找出真路并护送药材通过山口。",
+      "en": "Find the true route and escort the medicine cargo through the pass."
+    },
+    "reward_gold_range": [
+      60,
+      120
+    ],
+    "tags": [
+      "mist",
+      "sand",
+      "mislead"
+    ],
+    "location": {
+      "zh": "黄风岭前哨",
+      "en": "Huangfeng Outpost"
+    },
+    "turn": 8,
+    "progress": 3,
+    "required_progress": 4,
+    "threat_level": 7,
+    "completed": false,
+    "flags": []
+  },
+  "combat": null
+}

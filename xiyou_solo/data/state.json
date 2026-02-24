@@ -1,0 +1,129 @@
+{
+  "session_id": "b928daee-0da7-4bc5-9095-6e8761573577",
+  "language": "zh",
+  "tone": "light_myth_adventure",
+  "player": {
+    "name": "Tester",
+    "title": {
+      "zh": "云游客",
+      "en": "Wayfarer"
+    },
+    "race_id": "human",
+    "class_id": "wanderer",
+    "stats": {
+      "body": 12,
+      "wit": 11,
+      "spirit": 12,
+      "luck": 11
+    },
+    "max_hp": 14,
+    "hp": 1,
+    "gold": 70,
+    "inventory": [
+      "travel_rations",
+      "rope"
+    ],
+    "temp_bonuses": {}
+  },
+  "world": {
+    "title": {
+      "zh": "西游后传",
+      "en": "Post-Pilgrimage Journey"
+    },
+    "era": {
+      "zh": "取经归来之后",
+      "en": "After the Pilgrimage"
+    },
+    "rumors": [
+      {
+        "zh": "黄风岭旧道最近常有小妖收过路费。",
+        "en": "Imps have started charging toll on the old pass."
+      },
+      {
+        "zh": "流沙渡夜里常有风灯失踪。",
+        "en": "Lanterns disappear at night near Liusha Crossing."
+      }
+    ]
+  },
+  "story": {
+    "location": {
+      "zh": "流沙渡夜市",
+      "en": "Liusha Night Market"
+    },
+    "goal": {
+      "zh": "调查药引失窃并平安返程",
+      "en": "Investigate the stolen medicine bait and return safely"
+    },
+    "flags": [],
+    "turn": 2,
+    "current_quest": "huangfeng",
+    "encounter_index": 1,
+    "last_options": [
+      {
+        "hint": {
+          "zh": "接近事件：Forest Imps Block the Road",
+          "en": "Approach event: Forest Imps Block the Road"
+        },
+        "action": "approach",
+        "roll": {
+          "attr": "wit",
+          "dc": 12,
+          "reason": {
+            "zh": "你要先评估风险。",
+            "en": "You assess risk before engagement."
+          }
+        }
+      },
+      {
+        "hint": {
+          "zh": "绕路观察",
+          "en": "Scout from a detour"
+        },
+        "action": "scout",
+        "roll": {
+          "attr": "luck",
+          "dc": 12,
+          "reason": {
+            "zh": "你尝试避开正面冲突。",
+            "en": "You try to avoid direct conflict."
+          }
+        }
+      },
+      {
+        "hint": {
+          "zh": "直接推进",
+          "en": "Push forward directly"
+        },
+        "action": "push forward",
+        "roll": {
+          "attr": "body",
+          "dc": 15,
+          "reason": {
+            "zh": "你选择硬顶推进。",
+            "en": "You push through with force."
+          }
+        }
+      }
+    ],
+    "pending_roll_plan": {
+      "attr": "body",
+      "dc": 15,
+      "reason": {
+        "zh": "你选择硬顶推进。",
+        "en": "You push through with force."
+      }
+    },
+    "last_outcome": "outcome_success"
+  },
+  "npcs": [
+    {
+      "id": "xu_yaosheng",
+      "name": {
+        "zh": "许药生",
+        "en": "Xu Yaosheng"
+      },
+      "attitude": "friendly"
+    }
+  ],
+  "combat": null
+}

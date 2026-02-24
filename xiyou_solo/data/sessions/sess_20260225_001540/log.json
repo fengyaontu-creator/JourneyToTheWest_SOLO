@@ -1,0 +1,505 @@
+{
+  "session_id": "sess_20260225_001540",
+  "events": [
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "quest_selected",
+      "meta": {
+        "quest_id": "huangfeng_mist",
+        "quest_title": {
+          "zh": "黄风岭迷雾",
+          "en": "Huangfeng Mist"
+        },
+        "goal": {
+          "zh": "找出真路并护送药材通过山口。",
+          "en": "Find the true route and escort the medicine cargo through the pass."
+        },
+        "reward_gold_range": [
+          60,
+          120
+        ]
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "character_created",
+      "meta": {
+        "name": "???",
+        "race_id": "fox_spirit",
+        "class_id": "martial",
+        "stats": {
+          "body": 9,
+          "wit": 13,
+          "spirit": 9,
+          "luck": 10
+        },
+        "roll_method": "3d6",
+        "roll_details": {
+          "body": [
+            3,
+            3,
+            3
+          ],
+          "wit": [
+            6,
+            4,
+            1
+          ],
+          "spirit": [
+            4,
+            4,
+            1
+          ],
+          "luck": [
+            4,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "chapter_1_start",
+      "meta": {
+        "location": {
+          "zh": "黄风岭前哨",
+          "en": "Huangfeng Outpost"
+        },
+        "quest_id": "huangfeng_mist"
+      }
+    },
+    {
+      "type": "gold_change",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "buy_item",
+      "meta": {
+        "delta": -5,
+        "gold": 45
+      }
+    },
+    {
+      "type": "item_use",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "buy",
+      "meta": {
+        "item_id": "torch",
+        "qty": 1
+      }
+    },
+    {
+      "type": "item_use",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "next_advantage",
+      "meta": {
+        "item_id": "torch",
+        "tags": [
+          "mist"
+        ]
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "????",
+      "meta": {}
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "check_resolved",
+      "meta": {
+        "event_id": "trickster",
+        "event_type": "hazard",
+        "risk": "high",
+        "attr": "luck",
+        "dc": 14,
+        "mode": "adv",
+        "rolls": [
+          11,
+          18
+        ],
+        "d20": 18,
+        "mod": 0,
+        "bonus": 0,
+        "total": 18,
+        "passive": false,
+        "success": true,
+        "outcome": "outcome_success"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "turn_resolved",
+      "meta": {
+        "event_id": "trickster",
+        "status_key": "outcome_success",
+        "outcome": "outcome_success"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T16:15:40Z",
+      "content": "session_exit",
+      "meta": {}
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T16:16:20Z",
+      "content": "session_exit",
+      "meta": {}
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T16:22:24Z",
+      "content": "走走看",
+      "meta": {}
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T16:22:24Z",
+      "content": "check_resolved",
+      "meta": {
+        "event_id": "sand_clue",
+        "event_type": "clue",
+        "risk": "low",
+        "attr": "wit",
+        "dc": 11,
+        "mode": "passive",
+        "rolls": [],
+        "d20": null,
+        "mod": 1,
+        "bonus": 0,
+        "total": 11,
+        "passive": true,
+        "success": true,
+        "outcome": "outcome_success"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:22:24Z",
+      "content": "turn_resolved",
+      "meta": {
+        "event_id": "sand_clue",
+        "status_key": "passive_success",
+        "outcome": "outcome_success"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T16:27:11Z",
+      "content": "找到药材",
+      "meta": {}
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T16:27:11Z",
+      "content": "check_resolved",
+      "meta": {
+        "event_id": "false_clue",
+        "event_type": "mislead",
+        "risk": "low",
+        "attr": "wit",
+        "dc": 12,
+        "mode": "passive",
+        "rolls": [],
+        "d20": null,
+        "mod": 1,
+        "bonus": 0,
+        "total": 11,
+        "passive": true,
+        "success": false,
+        "outcome": "outcome_partial"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:27:11Z",
+      "content": "turn_resolved",
+      "meta": {
+        "event_id": "false_clue",
+        "status_key": "passive_fail",
+        "outcome": "outcome_partial"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T16:27:59Z",
+      "content": "观察附近",
+      "meta": {}
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T16:27:59Z",
+      "content": "check_resolved",
+      "meta": {
+        "event_id": "mist_path",
+        "event_type": "clue",
+        "risk": "low",
+        "attr": "wit",
+        "dc": 12,
+        "mode": "passive",
+        "rolls": [],
+        "d20": null,
+        "mod": 1,
+        "bonus": 0,
+        "total": 11,
+        "passive": true,
+        "success": false,
+        "outcome": "outcome_partial"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:27:59Z",
+      "content": "turn_resolved",
+      "meta": {
+        "event_id": "mist_path",
+        "status_key": "passive_fail",
+        "outcome": "outcome_partial"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T16:28:19Z",
+      "content": "看看我有什么",
+      "meta": {}
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T16:28:19Z",
+      "content": "check_resolved",
+      "meta": {
+        "event_id": "sand_clue",
+        "event_type": "clue",
+        "risk": "low",
+        "attr": "wit",
+        "dc": 12,
+        "mode": "passive",
+        "rolls": [],
+        "d20": null,
+        "mod": 1,
+        "bonus": 0,
+        "total": 11,
+        "passive": true,
+        "success": false,
+        "outcome": "outcome_partial"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:28:19Z",
+      "content": "turn_resolved",
+      "meta": {
+        "event_id": "sand_clue",
+        "status_key": "passive_fail",
+        "outcome": "outcome_partial"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T16:56:30Z",
+      "content": "????",
+      "meta": {}
+    },
+    {
+      "type": "dm_narrative",
+      "ts": "2026-02-24T16:56:30Z",
+      "content": "你继续推进，取经之后的天地依旧热闹，线索与传闻交错在一起。\n周围人对你的行动有了反应，局势也逐渐聚焦到一个关键点。\n整体氛围轻松，但你下一步仍会影响压力走向。",
+      "meta": {
+        "raw": "你继续推进，取经之后的天地依旧热闹，线索与传闻交错在一起。\n周围人对你的行动有了反应，局势也逐渐聚焦到一个关键点。\n整体氛围轻松，但你下一步仍会影响压力走向。\n\n```json\n{\n  \"need_check\": true,\n  \"check\": {\n    \"attribute\": \"Mind\",\n    \"dc\": 15,\n    \"reason\": \"你需要在混杂线索中辨出关键真相。\"\n  },\n  \"enter_combat\": false,\n  \"combat\": {\n    \"enemy_pack_id\": \"\"\n  },\n  \"grant_clue\": false,\n  \"clue\": {\n    \"title\": \"\",\n    \"detail\": \"\"\n  },\n  \"offer_actions\": [\n    \"观察细节\",\n    \"与目击者交谈\",\n    \"谨慎推进\"\n  ],\n  \"tone_tags\": [\n    \"light\",\n    \"myth\"\n  ]\n}\n```",
+        "directive": {
+          "need_check": true,
+          "check": {
+            "attribute": "Mind",
+            "dc": 15,
+            "reason": "你需要在混杂线索中辨出关键真相。"
+          },
+          "enter_combat": false,
+          "combat": {
+            "enemy_pack_id": ""
+          },
+          "grant_clue": false,
+          "clue": {
+            "title": "",
+            "detail": ""
+          },
+          "offer_actions": [
+            "观察细节",
+            "与目击者交谈",
+            "谨慎推进"
+          ],
+          "tone_tags": [
+            "light",
+            "myth"
+          ]
+        }
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T16:56:30Z",
+      "content": "directive_check",
+      "meta": {
+        "attr": "wit",
+        "dc": 15,
+        "reason": "你需要在混杂线索中辨出关键真相。",
+        "mode": "normal",
+        "rolls": [
+          3
+        ],
+        "d20": 3,
+        "mod": 1,
+        "bonus": 0,
+        "total": 4,
+        "outcome": "outcome_fumble"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:56:30Z",
+      "content": "turn_resolved",
+      "meta": {
+        "status_key": "outcome_fumble"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T16:56:30Z",
+      "content": "session_exit",
+      "meta": {}
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T16:59:07Z",
+      "content": "随便走走",
+      "meta": {}
+    },
+    {
+      "type": "dm_narrative",
+      "ts": "2026-02-24T16:59:15Z",
+      "content": "Part A: Narrative  \n你在黄风岭前哨放松了紧张的心情，四处走动，呼吸着清新的空气。周围的雾气如同轻纱般缭绕，让你觉得似乎有许多隐秘的故事在等待你的探索。你注意到一些野花在微风中摇曳，伴随着远处的溪水声，整个场景显得宁静而安详。然而，随着你深入，偶尔隐约传来的低语声又提醒着你，这里似乎潜藏着某种不安的气息。  \n\n- 你可以仔细观察周围的植物，看看是否有什么药材可供收集。  \n- 你可以试着跟随那些低语声，看看它们源自何处。  \n- 你可以继续在这片区域走动，寻找其他可能的线索。  \n\nPart B: Directive JSON",
+      "meta": {
+        "raw": "Part A: Narrative  \n你在黄风岭前哨放松了紧张的心情，四处走动，呼吸着清新的空气。周围的雾气如同轻纱般缭绕，让你觉得似乎有许多隐秘的故事在等待你的探索。你注意到一些野花在微风中摇曳，伴随着远处的溪水声，整个场景显得宁静而安详。然而，随着你深入，偶尔隐约传来的低语声又提醒着你，这里似乎潜藏着某种不安的气息。  \n\n- 你可以仔细观察周围的植物，看看是否有什么药材可供收集。  \n- 你可以试着跟随那些低语声，看看它们源自何处。  \n- 你可以继续在这片区域走动，寻找其他可能的线索。  \n\nPart B: Directive JSON  \n```json\n{\n  \"need_check\": false,\n  \"check\": {\n    \"attribute\": \"Mind\",\n    \"dc\": 10,\n    \"reason\": \"观察环境的细节与潜在的线索\"\n  },\n  \"enter_combat\": false,\n  \"combat\": {\n    \"enemy_pack_id\": \"\"\n  },\n  \"grant_clue\": false,\n  \"clue\": {\n    \"title\": \"\",\n    \"detail\": \"\"\n  },\n  \"offer_actions\": [\n    \"观察周围的植物\",\n    \"跟随低语声\",\n    \"继续走动寻找线索\"\n  ],\n  \"tone_tags\": [\"light\", \"myth\"]\n}\n```",
+        "directive": {
+          "need_check": false,
+          "check": {
+            "attribute": "Mind",
+            "dc": 10,
+            "reason": "观察环境的细节与潜在的线索"
+          },
+          "enter_combat": false,
+          "combat": {
+            "enemy_pack_id": ""
+          },
+          "grant_clue": false,
+          "clue": {
+            "title": "",
+            "detail": ""
+          },
+          "offer_actions": [
+            "观察周围的植物",
+            "跟随低语声",
+            "继续走动寻找线索"
+          ],
+          "tone_tags": [
+            "light",
+            "myth"
+          ]
+        }
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T16:59:15Z",
+      "content": "directive_passive",
+      "meta": {
+        "attr": "wit",
+        "dc": 10,
+        "total": 11,
+        "passive": true,
+        "outcome": "outcome_success"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:59:15Z",
+      "content": "turn_resolved",
+      "meta": {
+        "status_key": "passive_success"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T16:59:37Z",
+      "content": "1",
+      "meta": {}
+    },
+    {
+      "type": "dm_narrative",
+      "ts": "2026-02-24T16:59:45Z",
+      "content": "Part A: Narrative  \n你决定仔细观察周围的植物，试图寻找一些珍贵的药材。低语声在耳边渐渐清晰，你发现那些野花中，有几种似乎是传说中用于治疗的草药。阳光透过雾气洒落，给这些植物镀上了一层金色的光辉。就在此时，你的心中浮现出一个念头，或许这些药材还隐藏着更深的秘密。你感到兴奋，决定进一步探索这些植物的用途。  \n\n- 你可以尝试采集这些药材，看看它们的效果如何。  \n- 你可以先观察一下周围，寻找是否有其他人也在采集药材。  \n- 你可以决定跟随低语声，看看它们是否与药材有关。  \n\nPart B: Directive JSON",
+      "meta": {
+        "raw": "Part A: Narrative  \n你决定仔细观察周围的植物，试图寻找一些珍贵的药材。低语声在耳边渐渐清晰，你发现那些野花中，有几种似乎是传说中用于治疗的草药。阳光透过雾气洒落，给这些植物镀上了一层金色的光辉。就在此时，你的心中浮现出一个念头，或许这些药材还隐藏着更深的秘密。你感到兴奋，决定进一步探索这些植物的用途。  \n\n- 你可以尝试采集这些药材，看看它们的效果如何。  \n- 你可以先观察一下周围，寻找是否有其他人也在采集药材。  \n- 你可以决定跟随低语声，看看它们是否与药材有关。  \n\nPart B: Directive JSON\n```json\n{\n  \"need_check\": true,\n  \"check\": {\n    \"attribute\": \"Mind\",\n    \"dc\": 15,\n    \"reason\": \"你需要仔细观察和判断这些植物的药用价值。\"\n  },\n  \"enter_combat\": false,\n  \"combat\": {\n    \"enemy_pack_id\": \"\"\n  },\n  \"grant_clue\": false,\n  \"clue\": {\n    \"title\": \"\",\n    \"detail\": \"\"\n  },\n  \"offer_actions\": [\"采集药材\", \"观察周围\", \"跟随低语声\"],\n  \"tone_tags\": [\"light\", \"myth\"]\n}\n```",
+        "directive": {
+          "need_check": true,
+          "check": {
+            "attribute": "Mind",
+            "dc": 15,
+            "reason": "你需要仔细观察和判断这些植物的药用价值。"
+          },
+          "enter_combat": false,
+          "combat": {
+            "enemy_pack_id": ""
+          },
+          "grant_clue": false,
+          "clue": {
+            "title": "",
+            "detail": ""
+          },
+          "offer_actions": [
+            "采集药材",
+            "观察周围",
+            "跟随低语声"
+          ],
+          "tone_tags": [
+            "light",
+            "myth"
+          ]
+        }
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T16:59:45Z",
+      "content": "directive_check",
+      "meta": {
+        "attr": "wit",
+        "dc": 15,
+        "reason": "你需要仔细观察和判断这些植物的药用价值。",
+        "mode": "normal",
+        "rolls": [
+          13
+        ],
+        "d20": 13,
+        "mod": 1,
+        "bonus": 0,
+        "total": 14,
+        "outcome": "outcome_partial"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T16:59:45Z",
+      "content": "turn_resolved",
+      "meta": {
+        "status_key": "outcome_partial"
+      }
+    }
+  ]
+}

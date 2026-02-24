@@ -1,0 +1,1162 @@
+{
+  "session_id": "b928daee-0da7-4bc5-9095-6e8761573577",
+  "events": [
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:38:27Z",
+      "content": "玩家设定角色名：风",
+      "meta": {
+        "field": "player.name",
+        "value": "风"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:38:27Z",
+      "content": "会话开始。",
+      "meta": {
+        "location": "流沙渡附近"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:38:34Z",
+      "content": "风：随便逛逛",
+      "meta": {
+        "input": "随便逛逛"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:38:34Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你沿着青石路来到一处河湾集市，风里有桃香和新蒸米糕的热气。\n河岸边的木牌写着“流沙渡夜市”，摊贩们正议论昨夜天灯忽然坠入上游芦苇荡。\n一个背药篓的青年请你帮忙，他说自己丢了给师父的药引，怀疑被顽猴顺走。\n远处还能听见锣鼓声，像是有小庙会即将开场，气氛并不紧张，反而热闹。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片，看看有没有线索。\n2) 先与药篓青年细聊，确认药引外形与最后出现地点。\n3) 去集市高处观察人流，判断可疑方向。\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:38:34Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:39:32Z",
+      "content": "判定：d20=8 + 体(2) = 10 vs DC10 -> 成功",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "d20": 8,
+        "mod": 2,
+        "total": 10,
+        "outcome": "成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:39:32Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "成功"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:39:41Z",
+      "content": "风：3",
+      "meta": {
+        "input": "3"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:39:41Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你沿着青石路来到一处河湾集市，风里有桃香和新蒸米糕的热气。\n河岸边的木牌写着“流沙渡夜市”，摊贩们正议论昨夜天灯忽然坠入上游芦苇荡。\n一个背药篓的青年请你帮忙，他说自己丢了给师父的药引，怀疑被顽猴顺走。\n远处还能听见锣鼓声，像是有小庙会即将开场，气氛并不紧张，反而热闹。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片，看看有没有线索。\n2) 先与药篓青年细聊，确认药引外形与最后出现地点。\n3) 去集市高处观察人流，判断可疑方向。\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:39:41Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:40:18Z",
+      "content": "判定：d20=2 + 体(2) = 4 vs DC10 -> 失败",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "d20": 2,
+        "mod": 2,
+        "total": 4,
+        "outcome": "失败"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:40:18Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "失败"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:40:23Z",
+      "content": "风：2",
+      "meta": {
+        "input": "2"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:40:23Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你沿着青石路来到一处河湾集市，风里有桃香和新蒸米糕的热气。\n河岸边的木牌写着“流沙渡夜市”，摊贩们正议论昨夜天灯忽然坠入上游芦苇荡。\n一个背药篓的青年请你帮忙，他说自己丢了给师父的药引，怀疑被顽猴顺走。\n远处还能听见锣鼓声，像是有小庙会即将开场，气氛并不紧张，反而热闹。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片，看看有没有线索。\n2) 先与药篓青年细聊，确认药引外形与最后出现地点。\n3) 去集市高处观察人流，判断可疑方向。\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:40:23Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:40:27Z",
+      "content": "判定：d20=12 + 体(2) = 14 vs DC10 -> 成功",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "d20": 12,
+        "mod": 2,
+        "total": 14,
+        "outcome": "成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:40:27Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "成功"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:40:35Z",
+      "content": "风：2",
+      "meta": {
+        "input": "2"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:40:35Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你沿着青石路来到一处河湾集市，风里有桃香和新蒸米糕的热气。\n河岸边的木牌写着“流沙渡夜市”，摊贩们正议论昨夜天灯忽然坠入上游芦苇荡。\n一个背药篓的青年请你帮忙，他说自己丢了给师父的药引，怀疑被顽猴顺走。\n远处还能听见锣鼓声，像是有小庙会即将开场，气氛并不紧张，反而热闹。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片，看看有没有线索。\n2) 先与药篓青年细聊，确认药引外形与最后出现地点。\n3) 去集市高处观察人流，判断可疑方向。\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:40:35Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:40:46Z",
+      "content": "判定：d20=12 + 体(2) = 14 vs DC10 -> 成功",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "d20": 12,
+        "mod": 2,
+        "total": 14,
+        "outcome": "成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:40:46Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "成功"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:40:48Z",
+      "content": "风：1",
+      "meta": {
+        "input": "1"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:40:48Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你沿着青石路来到一处河湾集市，风里有桃香和新蒸米糕的热气。\n河岸边的木牌写着“流沙渡夜市”，摊贩们正议论昨夜天灯忽然坠入上游芦苇荡。\n一个背药篓的青年请你帮忙，他说自己丢了给师父的药引，怀疑被顽猴顺走。\n远处还能听见锣鼓声，像是有小庙会即将开场，气氛并不紧张，反而热闹。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片，看看有没有线索。\n2) 先与药篓青年细聊，确认药引外形与最后出现地点。\n3) 去集市高处观察人流，判断可疑方向。\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:40:48Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:40:56Z",
+      "content": "判定：d20=15 + 体(2) = 17 vs DC10 -> 超额成功",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "d20": 15,
+        "mod": 2,
+        "total": 17,
+        "outcome": "超额成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:40:56Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "超额成功"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:41:02Z",
+      "content": "风：1",
+      "meta": {
+        "input": "1"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:41:02Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你沿着青石路来到一处河湾集市，风里有桃香和新蒸米糕的热气。\n河岸边的木牌写着“流沙渡夜市”，摊贩们正议论昨夜天灯忽然坠入上游芦苇荡。\n一个背药篓的青年请你帮忙，他说自己丢了给师父的药引，怀疑被顽猴顺走。\n远处还能听见锣鼓声，像是有小庙会即将开场，气氛并不紧张，反而热闹。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片，看看有没有线索。\n2) 先与药篓青年细聊，确认药引外形与最后出现地点。\n3) 去集市高处观察人流，判断可疑方向。\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:41:02Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:41:10Z",
+      "content": "判定：d20=15 + 体(2) = 17 vs DC10 -> 超额成功",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "d20": 15,
+        "mod": 2,
+        "total": 17,
+        "outcome": "超额成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:41:10Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "超额成功"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:41:14Z",
+      "content": "风：3",
+      "meta": {
+        "input": "3"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:41:14Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你沿着青石路来到一处河湾集市，风里有桃香和新蒸米糕的热气。\n河岸边的木牌写着“流沙渡夜市”，摊贩们正议论昨夜天灯忽然坠入上游芦苇荡。\n一个背药篓的青年请你帮忙，他说自己丢了给师父的药引，怀疑被顽猴顺走。\n远处还能听见锣鼓声，像是有小庙会即将开场，气氛并不紧张，反而热闹。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片，看看有没有线索。\n2) 先与药篓青年细聊，确认药引外形与最后出现地点。\n3) 去集市高处观察人流，判断可疑方向。\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:41:14Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:46:29Z",
+      "content": "会话开始。",
+      "meta": {
+        "location": "流沙渡附近"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:46:37Z",
+      "content": "风：随便走走",
+      "meta": {
+        "input": "随便走走",
+        "resolved_input": "随便走走",
+        "from_option": false
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:46:37Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你站在流沙渡夜市口，木牌被灯火照得金黄，河面反着细碎光点。\n糖画摊和香饼摊挤在一排，叫卖声和锣鼓声混在一起，气氛热闹。\n许药生正背着药篓四处张望，像在等一个肯帮忙的熟面孔。\n你这回合选择“随便走走”，周围人都在等你下一步。\n上一轮结果是“超额成功”，现场因此多了新的反应。\n第 1 回合，目标仍是：从小事做起，积累名望与见闻。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片\n2) 与许药生细聊药引细节\n3) 登高观察夜市人流\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：运\n难度：10\n原因：随行探索依赖偶然发现。",
+        "node": "market"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:46:37Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "运",
+        "dc": 10,
+        "reason": "随行探索依赖偶然发现。",
+        "on_success": "market",
+        "on_fail": "market",
+        "intent": "闲逛"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:46:43Z",
+      "content": "判定：d20=15 + 运(1) = 16 vs DC10 -> 超额成功",
+      "meta": {
+        "attr": "运",
+        "dc": 10,
+        "d20": 15,
+        "mod": 1,
+        "total": 16,
+        "outcome": "超额成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:46:43Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "超额成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:46:43Z",
+      "content": "已更新故事节点。",
+      "meta": {
+        "field": "story.node",
+        "value": "market"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:46:48Z",
+      "content": "风：与许药生细聊药引的外形和最后出现地点",
+      "meta": {
+        "input": "2",
+        "resolved_input": "与许药生细聊药引的外形和最后出现地点",
+        "from_option": true,
+        "option_index": 2,
+        "option_hint": "与许药生细聊药引细节"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:46:48Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你站在流沙渡夜市口，木牌被灯火照得金黄，河面反着细碎光点。\n糖画摊和香饼摊挤在一排，叫卖声和锣鼓声混在一起，气氛热闹。\n许药生正背着药篓四处张望，像在等一个肯帮忙的熟面孔。\n你这回合选择“与许药生细聊药引的外形和最后出现地点”，周围人都在等你下一步。\n上一轮结果是“超额成功”，现场因此多了新的反应。\n第 2 回合，目标仍是：从小事做起，积累名望与见闻。\n\n你可以尝试：\n1) 去芦苇荡搜寻天灯残片\n2) 与许药生细聊药引细节\n3) 登高观察夜市人流\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：心\n难度：15\n原因：需要建立信任并稳住对话节奏。",
+        "node": "market"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:46:48Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "心",
+        "dc": 15,
+        "reason": "需要建立信任并稳住对话节奏。",
+        "on_success": "tea",
+        "on_fail": "market",
+        "intent": "与许药生细聊药引细节"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:46:55Z",
+      "content": "判定：d20=18 + 心(2) = 20 vs DC15 -> 超额成功",
+      "meta": {
+        "attr": "心",
+        "dc": 15,
+        "d20": 18,
+        "mod": 2,
+        "total": 20,
+        "outcome": "超额成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:46:55Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "超额成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:46:55Z",
+      "content": "已更新故事节点。",
+      "meta": {
+        "field": "story.node",
+        "value": "tea"
+      }
+    },
+    {
+      "type": "npc",
+      "ts": "2026-02-24T14:46:55Z",
+      "content": "你与现场 NPC 进行了交流。",
+      "meta": {
+        "npc": "许药生/脚夫",
+        "tone": "合作"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:47:22Z",
+      "content": "风：把许药生打晕",
+      "meta": {
+        "input": "把许药生打晕",
+        "resolved_input": "把许药生打晕",
+        "from_option": false
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:47:22Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你在河边茶棚坐下，铜壶咕嘟作响，老板娘顺手添了半盏热茶。\n许药生把药引形状画在桌面水渍上，神情比先前镇定了些。\n邻桌脚夫也听过这事，正压低声音交换各自看到的细节。\n你这回合选择“把许药生打晕”，周围人都在等你下一步。\n上一轮结果是“超额成功”，现场因此多了新的反应。\n第 3 回合，目标仍是：从小事做起，积累名望与见闻。\n\n你可以尝试：\n1) 请许药生画出药引纹路\n2) 说服脚夫带路去旧道\n3) 先补给体力再继续\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。",
+        "node": "tea"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:47:22Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。",
+        "on_success": "tea",
+        "on_fail": "tea",
+        "intent": "基础行动"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:47:37Z",
+      "content": "判定：d20=16 + 体(2) = 18 vs DC10 -> 超额成功",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "d20": 16,
+        "mod": 2,
+        "total": 18,
+        "outcome": "超额成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:47:37Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "超额成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:47:37Z",
+      "content": "已更新故事节点。",
+      "meta": {
+        "field": "story.node",
+        "value": "tea"
+      }
+    },
+    {
+      "type": "npc",
+      "ts": "2026-02-24T14:47:37Z",
+      "content": "你与现场 NPC 进行了交流。",
+      "meta": {
+        "npc": "许药生/脚夫",
+        "tone": "合作"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:47:39Z",
+      "content": "风：请许药生重画药引纹路并比对灯纸",
+      "meta": {
+        "input": "1",
+        "resolved_input": "请许药生重画药引纹路并比对灯纸",
+        "from_option": true,
+        "option_index": 1,
+        "option_hint": "请许药生画出药引纹路"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:47:39Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你在河边茶棚坐下，铜壶咕嘟作响，老板娘顺手添了半盏热茶。\n许药生把药引形状画在桌面水渍上，神情比先前镇定了些。\n邻桌脚夫也听过这事，正压低声音交换各自看到的细节。\n你这回合选择“请许药生重画药引纹路并比对灯纸”，周围人都在等你下一步。\n上一轮结果是“超额成功”，现场因此多了新的反应。\n第 4 回合，目标仍是：从小事做起，积累名望与见闻。\n\n你可以尝试：\n1) 请许药生画出药引纹路\n2) 说服脚夫带路去旧道\n3) 先补给体力再继续\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：智\n难度：15\n原因：需要细致比对图样差异。",
+        "node": "tea"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:47:39Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "智",
+        "dc": 15,
+        "reason": "需要细致比对图样差异。",
+        "on_success": "reed",
+        "on_fail": "tea",
+        "intent": "请许药生画出药引纹路"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T14:47:45Z",
+      "content": "判定：d20=18 + 智(1) = 19 vs DC15 -> 成功",
+      "meta": {
+        "attr": "智",
+        "dc": 15,
+        "d20": 18,
+        "mod": 1,
+        "total": 19,
+        "outcome": "成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:47:45Z",
+      "content": "已更新 story.last_outcome。",
+      "meta": {
+        "field": "story.last_outcome",
+        "value": "成功"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T14:47:45Z",
+      "content": "已更新故事节点。",
+      "meta": {
+        "field": "story.node",
+        "value": "reed"
+      }
+    },
+    {
+      "type": "npc",
+      "ts": "2026-02-24T14:47:45Z",
+      "content": "你与现场 NPC 进行了交流。",
+      "meta": {
+        "npc": "许药生/脚夫",
+        "tone": "合作"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T14:47:51Z",
+      "content": "风：18",
+      "meta": {
+        "input": "18",
+        "resolved_input": "18",
+        "from_option": false
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T14:47:51Z",
+      "content": "DM 回复了场景与行动引导。",
+      "meta": {
+        "text": "你拨开芦苇往里走，脚下泥水很浅，偶尔能看见被压断的苇梗。\n几片焦黄灯纸卡在枝杈上，边缘有细细的朱砂线，像是人为描过。\n河风掠过时会带来一阵药香，方向正好朝夜市那边。\n你这回合选择“18”，周围人都在等你下一步。\n上一轮结果是“成功”，现场因此多了新的反应。\n第 5 回合，目标仍是：从小事做起，积累名望与见闻。\n\n你可以尝试：\n1) 追踪朱砂线来源\n2) 安抚芦苇中的小精怪\n3) 快步赶回夜市交叉核对\n4) 你也可以自由输入任何行动。\n\n【判定请求】\n属性：体\n难度：10\n原因：这是一个基础行动检定，用于确认执行效果。",
+        "node": "reed"
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T14:47:51Z",
+      "content": "DM 请求进行检定。",
+      "meta": {
+        "attr": "体",
+        "dc": 10,
+        "reason": "这是一个基础行动检定，用于确认执行效果。",
+        "on_success": "reed",
+        "on_fail": "reed",
+        "intent": "基础行动"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "player.name set",
+      "meta": {
+        "field": "player.name",
+        "value": "Tester"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "session_start",
+      "meta": {
+        "language": "zh"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "language_changed",
+      "meta": {
+        "language": "en"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "approach",
+      "meta": {
+        "raw": "approach",
+        "from_option": false
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "dm_reply",
+      "meta": {
+        "text": "Old Pass of Huangfeng\nTrack stolen medicinal bait in sand winds.\nInvestigate the stolen medicine bait and return safely\nYou can try:\n1) Approach event: Forest Imps Block the Road\n2) Scout from a detour\n3) Push forward directly\n4) You can also enter any custom action.\n\n[ROLL REQUEST]\nAttribute: Wit\nDC: 12\nReason: You assess risk before engagement."
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "roll_requested",
+      "meta": {
+        "attr": "wit",
+        "dc": 12,
+        "reason": "You assess risk before engagement."
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "player_check roll 12 vs 12",
+      "meta": {
+        "who": "player_check",
+        "d20": 12,
+        "mod": 0,
+        "total": 12,
+        "dc": 12,
+        "success": true,
+        "attr": "wit"
+      }
+    },
+    {
+      "type": "action",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "push forward",
+      "meta": {
+        "raw": "push forward",
+        "from_option": false
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "dm_reply",
+      "meta": {
+        "text": "Old Pass of Huangfeng\nTrack stolen medicinal bait in sand winds.\nInvestigate the stolen medicine bait and return safely\nYou can try:\n1) Approach event: Forest Imps Block the Road\n2) Scout from a detour\n3) Push forward directly\n4) You can also enter any custom action.\n\n[ROLL REQUEST]\nAttribute: Body\nDC: 15\nReason: You push through with force."
+      }
+    },
+    {
+      "type": "roll_request",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "roll_requested",
+      "meta": {
+        "attr": "body",
+        "dc": 15,
+        "reason": "You push through with force."
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "player_check roll 15 vs 15",
+      "meta": {
+        "who": "player_check",
+        "d20": 14,
+        "mod": 1,
+        "total": 15,
+        "dc": 15,
+        "success": true,
+        "attr": "body"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "combat_start",
+      "meta": {
+        "encounter_id": "road_block",
+        "enemies": [
+          "imp_scout",
+          "imp_scout"
+        ]
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "encounter_triggered",
+      "meta": {
+        "encounter_id": "road_block"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "player_attack roll 16 vs 12",
+      "meta": {
+        "who": "player_attack",
+        "d20": 15,
+        "mod": 1,
+        "total": 16,
+        "dc": 12,
+        "success": true,
+        "target": "imp_scout"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "imp_scout roll 9 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 7,
+        "mod": 2,
+        "total": 9,
+        "dc": 11,
+        "success": false,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "imp_scout roll 5 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 3,
+        "mod": 2,
+        "total": 5,
+        "dc": 11,
+        "success": false,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "round_summary",
+      "meta": {
+        "round": 2,
+        "message_count": 3
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "player_attack roll 20 vs 12",
+      "meta": {
+        "who": "player_attack",
+        "d20": 19,
+        "mod": 1,
+        "total": 20,
+        "dc": 12,
+        "success": true,
+        "target": "imp_scout"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "imp_scout roll 5 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 3,
+        "mod": 2,
+        "total": 5,
+        "dc": 11,
+        "success": false,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "round_summary",
+      "meta": {
+        "round": 3,
+        "message_count": 2
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "player_flee roll 16 vs 18",
+      "meta": {
+        "who": "player_flee",
+        "d20": 16,
+        "mod": 0,
+        "total": 16,
+        "dc": 18,
+        "success": false
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "imp_scout roll 22 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 20,
+        "mod": 2,
+        "total": 22,
+        "dc": 11,
+        "success": true,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "round_summary",
+      "meta": {
+        "round": 4,
+        "message_count": 2
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T15:46:35Z",
+      "content": "session_quit",
+      "meta": {}
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "session_start",
+      "meta": {
+        "language": "en"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "language_changed",
+      "meta": {
+        "language": "en"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "player_attack roll 4 vs 12",
+      "meta": {
+        "who": "player_attack",
+        "d20": 3,
+        "mod": 1,
+        "total": 4,
+        "dc": 12,
+        "success": false,
+        "target": "imp_scout"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "imp_scout roll 10 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 8,
+        "mod": 2,
+        "total": 10,
+        "dc": 11,
+        "success": false,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "round_summary",
+      "meta": {
+        "round": 5,
+        "message_count": 2
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "player_attack roll 21 vs 12",
+      "meta": {
+        "who": "player_attack",
+        "d20": 20,
+        "mod": 1,
+        "total": 21,
+        "dc": 12,
+        "success": true,
+        "target": "imp_scout"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "imp_scout roll 11 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 9,
+        "mod": 2,
+        "total": 11,
+        "dc": 11,
+        "success": true,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "round_summary",
+      "meta": {
+        "round": 6,
+        "message_count": 2
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "player_attack roll 6 vs 12",
+      "meta": {
+        "who": "player_attack",
+        "d20": 5,
+        "mod": 1,
+        "total": 6,
+        "dc": 12,
+        "success": false,
+        "target": "imp_scout"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "imp_scout roll 22 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 20,
+        "mod": 2,
+        "total": 22,
+        "dc": 11,
+        "success": true,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "round_summary",
+      "meta": {
+        "round": 7,
+        "message_count": 2
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "player_attack roll 5 vs 12",
+      "meta": {
+        "who": "player_attack",
+        "d20": 4,
+        "mod": 1,
+        "total": 5,
+        "dc": 12,
+        "success": false,
+        "target": "imp_scout"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "imp_scout roll 4 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 2,
+        "mod": 2,
+        "total": 4,
+        "dc": 11,
+        "success": false,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "round_summary",
+      "meta": {
+        "round": 8,
+        "message_count": 2
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "player_attack roll 2 vs 12",
+      "meta": {
+        "who": "player_attack",
+        "d20": 1,
+        "mod": 1,
+        "total": 2,
+        "dc": 12,
+        "success": false,
+        "target": "imp_scout"
+      }
+    },
+    {
+      "type": "roll_result",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "imp_scout roll 21 vs 11",
+      "meta": {
+        "who": "imp_scout",
+        "d20": 19,
+        "mod": 2,
+        "total": 21,
+        "dc": 11,
+        "success": true,
+        "phase": "enemy_attack"
+      }
+    },
+    {
+      "type": "combat",
+      "ts": "2026-02-24T15:46:55Z",
+      "content": "player_down",
+      "meta": {
+        "round": 9
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T15:53:13Z",
+      "content": "session_start",
+      "meta": {
+        "language": "en"
+      }
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T15:55:49Z",
+      "content": "session_start",
+      "meta": {
+        "language": "en"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T15:55:54Z",
+      "content": "language_changed",
+      "meta": {
+        "language": "zh"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T15:56:01Z",
+      "content": "session_quit",
+      "meta": {}
+    },
+    {
+      "type": "scene",
+      "ts": "2026-02-24T15:56:10Z",
+      "content": "session_start",
+      "meta": {
+        "language": "zh"
+      }
+    },
+    {
+      "type": "update",
+      "ts": "2026-02-24T15:56:13Z",
+      "content": "language_changed",
+      "meta": {
+        "language": "zh"
+      }
+    }
+  ]
+}
