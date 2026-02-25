@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "need_check": {"type": "boolean"},
+    "check": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "type": "string",
+          "enum": ["Body", "Mind", "Spirit", "Luck"]
+        },
+        "dc": {
+          "type": "integer",
+          "enum": [10, 15, 20, 25]
+        },
+        "reason": {"type": "string"}
+      },
+      "required": ["attribute", "dc", "reason"]
+    },
+    "enter_combat": {"type": "boolean"},
+    "combat": {
+      "type": "object",
+      "properties": {
+        "enemy_pack_id": {"type": "string"}
+      }
+    },
+    "grant_clue": {"type": "boolean"},
+    "clue": {
+      "type": "object",
+      "properties": {
+        "title": {"type": "string"},
+        "detail": {"type": "string"}
+      }
+    },
+    "offer_actions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "tone_tags": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "required": ["need_check", "check", "enter_combat"]
+}

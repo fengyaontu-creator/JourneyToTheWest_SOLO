@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import json
+import importlib.util
 import os
 import re
 import urllib.error
 import urllib.request
+from pathlib import Path
 from typing import Any, Dict
 
 
@@ -13,6 +15,19 @@ DEFAULT_MODEL = "openai/gpt-4o-mini"
 
 LAST_MODE = "unknown"
 LAST_ERROR = ""
+
+
+def _load_validator_functions():
+    validator_path = Path(__file__).resolve().parent / "engine" / "validator.py"
+    spec = importlib.util.spec_from_file_location("directive_validator", validator_path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Cannot load validator module from: {validator_path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.validate_directive, module.repair_directive, module.fallback_directive
+
+
+_validate_directive, _repair_directive, _fallback_directive = _load_validator_functions()
 
 
 def _has_key() -> bool:
@@ -71,6 +86,9 @@ def call_dm_stub(dm_system: str, dm_context: str, player_input: str) -> str:
             "offer_actions": ["观察细节", "与目击者交谈", "谨慎推进"],
             "tone_tags": ["light", "myth"],
         }
+    if not _validate_directive(directive):
+        repaired = _repair_directive(directive)
+        directive = repaired if _validate_directive(repaired) else _fallback_directive()
     return f"{narrative}\n\n```json\n{json.dumps(directive, ensure_ascii=False, indent=2)}\n```"
 
 

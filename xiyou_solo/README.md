@@ -141,3 +141,11 @@ Actions:
 HP 14/14 | 金币 70 | 关键道具 healing_herbs,incense_charm
 你要做什么？>
 ```
+
+## Testing
+
+Run all unit tests from the project root:
+
+```powershell
+python -m unittest -v
+```
