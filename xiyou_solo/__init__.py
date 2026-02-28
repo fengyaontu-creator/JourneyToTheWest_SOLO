@@ -1,0 +1,2 @@
+"""xiyou_solo package."""
+

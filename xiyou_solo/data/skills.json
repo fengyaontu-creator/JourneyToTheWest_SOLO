@@ -1,0 +1,36 @@
+{
+  "class_skills": {
+    "martial": ["power_strike"],
+    "pilgrim_monk": ["steady_mind"],
+    "talismanist": ["focus_charm"],
+    "wanderer": ["quick_shot"]
+  },
+  "skills": {
+    "power_strike": {
+      "id": "power_strike",
+      "attr": "body",
+      "roll_bonus": 2,
+      "extra_damage": 1,
+      "cooldown": 2
+    },
+    "steady_mind": {
+      "id": "steady_mind",
+      "attr": "spirit",
+      "roll_bonus": 2,
+      "cooldown": 2
+    },
+    "focus_charm": {
+      "id": "focus_charm",
+      "attr": "wit",
+      "roll_bonus": 2,
+      "cooldown": 2
+    },
+    "quick_shot": {
+      "id": "quick_shot",
+      "attr": "luck",
+      "roll_bonus": 1,
+      "extra_damage": 1,
+      "cooldown": 2
+    }
+  }
+}

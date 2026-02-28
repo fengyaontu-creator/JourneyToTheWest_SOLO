@@ -1,0 +1,59 @@
+{
+  "bandits_1": {
+    "name": "妖兵伏击",
+    "encounters": [
+      {
+        "max_round": 3,
+        "enemies": [
+          {
+            "name": "妖兵",
+            "hp": 2,
+            "ac": 12,
+            "atk_dc": 12,
+            "dmg": 1,
+            "loot_gold": [3, 8]
+          }
+        ]
+      },
+      {
+        "max_round": 4,
+        "enemies": [
+          {
+            "name": "妖犬",
+            "hp": 1,
+            "ac": 11,
+            "atk_dc": 11,
+            "dmg": 1,
+            "loot_gold": [1, 5]
+          },
+          {
+            "name": "妖兵",
+            "hp": 2,
+            "ac": 12,
+            "atk_dc": 12,
+            "dmg": 1,
+            "loot_gold": [2, 7]
+          }
+        ]
+      }
+    ]
+  },
+  "goblin_road": {
+    "name": "山路伏击",
+    "encounters": [
+      {
+        "max_round": 2,
+        "enemies": [
+          {
+            "name": "山贼探子",
+            "hp": 1,
+            "ac": 11,
+            "atk_dc": 11,
+            "dmg": 1,
+            "loot_gold": [2, 6]
+          }
+        ]
+      }
+    ]
+  }
+}

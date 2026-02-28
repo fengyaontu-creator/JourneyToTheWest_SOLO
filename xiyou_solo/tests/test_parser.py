@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from parser import ALLOWED_ATTR, ALLOWED_DC, parse_dm_output
+from xiyou_solo.parser import ALLOWED_ATTR, ALLOWED_DC, parse_dm_output
 
 
 class ParserTests(unittest.TestCase):

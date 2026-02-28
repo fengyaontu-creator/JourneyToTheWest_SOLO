@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from parser import parse_dm_output
+from xiyou_solo.parser import parse_dm_output
 
 
 class ParserExtractTests(unittest.TestCase):

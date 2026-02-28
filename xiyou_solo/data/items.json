@@ -1,0 +1,34 @@
+{
+  "dagger": {
+    "id": "dagger",
+    "type": "weapon",
+    "roll_bonus": 1,
+    "desc": "基础近战武器"
+  },
+  "healing_herbs": {
+    "id": "healing_herbs",
+    "type": "consumable",
+    "heal": 2,
+    "desc": "回复2点HP"
+  },
+  "buff_potion": {
+    "id": "buff_potion",
+    "type": "consumable",
+    "roll_bonus": 2,
+    "duration": 1,
+    "desc": "本轮检定+2"
+  },
+  "incense_charm": {
+    "id": "incense_charm",
+    "type": "consumable",
+    "roll_bonus": 1,
+    "duration": 2,
+    "desc": "持续2轮检定+1"
+  },
+  "smoke_bomb": {
+    "id": "smoke_bomb",
+    "type": "consumable",
+    "effect": "flee_success",
+    "desc": "本轮逃跑必定成功"
+  }
+}

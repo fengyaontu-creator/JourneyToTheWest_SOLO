@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-import engine
+from xiyou_solo import engine
 
 
 class DiceTests(unittest.TestCase):
